@@ -6,4 +6,4 @@
 
 #run
 base="$(dirname $0)"
-java -DCM_SYSTEM=fitnesse.wiki.cmSystems.GitCmSystem -jar "$base/fitnesse-standalone.jar" -p 8001
+sudo -n -u fitnesse-runner -g fitnesse-runner -k $base/fitnesse
