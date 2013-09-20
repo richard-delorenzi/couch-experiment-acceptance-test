@@ -1,0 +1,4 @@
+# put in sudoers
+
+#<user list> <host list> = (<runas list>) <tag list> <command list>
+ALL ALL = (fitnesse-runner:fitnesse-runner) NOPASSWD: /home/richard/+Files/workshops/couch-experiment-acceptance-test/fitnesse
