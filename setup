@@ -1,0 +1,32 @@
+#!/bin/bash
+
+runnerName=fitnesse-runner
+
+dirList=".git FitNesseRoot"
+exeList="fitnesse fitnesse-standalone.jar"
+
+#create new system user and group to run tests
+sudo adduser --system --group $runnerName
+
+#add self to new group
+sudo adduser $USER $runnerName
+
+#activate my new group
+currentGroup=$(id -g)
+newgrg $runnerName
+newgrp #$currentGroup
+
+#give new user access to what it needs
+chgrp -R $runnerName $dirList $fileList
+chmod -R g+w $dirList
+chmod g+x $exeList
+
+#stop me accidently running it as me
+chmod u-x $exeList
+
+#ensure groups and access rights don't change
+find $dirList -type d -print0 | xargs -0 chmod +X,ug+s
+setfacl -R -m default:group::rwx $dirList
+setfacl -R -m default:user::rwx $dirList
+
+  
