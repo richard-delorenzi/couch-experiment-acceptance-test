@@ -1,0 +1,2 @@
+|Table:smartrics.rest.fitnesse.fixture.RestFixture | http://localhost:8001 |
+| GET | /RestExperiment.InitialTest?rss |200 | | //title[text()='RestExperiment.InitialTest']|
