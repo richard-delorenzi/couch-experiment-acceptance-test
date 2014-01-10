@@ -1,0 +1,6 @@
+|Table:smartrics.rest.fitnesse.fixture.RestFixture|http://admin:password@127.0.0.1:5984|
+|DELETE|/q-couch|204||no-body|
+
+#|Table:smartrics.rest.fitnesse.fixture.RestFixture|http://localhost:5984/q-couch/_design/couch-experiment|
+#|setHeader                                        |Accept:application/json                               |
+#|GET|/_list/index/rides        |200        |       |       |
