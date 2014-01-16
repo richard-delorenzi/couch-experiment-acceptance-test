@@ -1,0 +1,3 @@
+|Table:smartrics.rest.fitnesse.fixture.RestFixture|http://localhost:5984/q-couch/_design/couch-experiment|
+|setHeader                                        |Accept:application/json                               |
+|GET|/_list/index/rides        |200        |       |       |

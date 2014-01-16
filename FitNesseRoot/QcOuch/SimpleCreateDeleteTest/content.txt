@@ -1,5 +1,4 @@
 |Table:smartrics.rest.fitnesse.fixture.RestFixture|http://admin:password@localhost:5984     |
 |setHeader                                        |Authorization: Basic YWRtaW46cGFzc3dvcmQ=|
 |PUT                                              |/q-couch    |201    |    |"ok":true|
-|DELETE                                           |/q-couch    |200    |    |"ok":true|
-
+|DELETE                                           |/q-couch    |200    |    |"ok":true    |

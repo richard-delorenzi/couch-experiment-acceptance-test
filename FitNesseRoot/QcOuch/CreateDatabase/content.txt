@@ -1,0 +1,13 @@
+|Table:smartrics.rest.fitnesse.fixture.RestFixture|http://admin:password@localhost:5984/                                                                    |
+|setHeader                                        |Authorization: Basic YWRtaW46cGFzc3dvcmQ=                                                                |
+|DELETE                                           |/q-couch                                   |     |                                 |                     |
+|PUT                                              |/q-couch                                   |201  |                                 |"ok":true            |
+|setBody                                          |{"type":"ride", "name":"base-test2", "description": "simple description", "wait_time_min" : 5}           |
+|PUT                                              |/q-couch/059312a0bee28c720b5f7acf9000150d  |201  |                                 |"ok":true            |
+|setBody                                          |{"type":"ride", "name":"list-test", "description": ["a list", "of", "descriptions"], "wait_time_min" : 5}|
+|PUT                                              |/q-couch/059312a0bee28c720b5f7acf90002455  |201  |                                 |"ok":true            |
+|setHeader                                        |Accept: application/json                                                                                 |
+|GET                                              |/q-couch/059312a0bee28c720b5f7acf90002455  |200  |Content-Type : application/json  |/type[text()="ride"] |
+
+
+
