@@ -21,5 +21,5 @@ Json
 ----
 If the pages you are fetching are JSON then you need to do `|setHeader|Accept: application/json|` at the top of the table. Then in the ?body section you put a javascript expression, if it is true then it passes. `jsonbody` is the object returned. e.g. if `{"ok":true}` is expected then write `jsonbody.ok`
 
-You can not use `||` for `or`. So add to top of page `!define or { || }` then use ${or} instead of `||`.
+You can not use `||` for `or`. So add to top of page `!define or { || }` then use `${or}` instead of `||`.
 
