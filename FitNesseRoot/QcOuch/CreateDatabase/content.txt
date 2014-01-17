@@ -1,9 +1,3 @@
-!define headers { !-Authorization: Basic YWRtaW46cGFzc3dvcmQ=
-Accept: application/json -! }
-
-!define RestFixture {Table:smartrics.rest.fitnesse.fixture.RestFixture}
-!define LocalCouchServer {http://admin:password@localhost:5984/}
-
 
 |${RestFixture}|${LocalCouchServer}|
 |setHeaders|${headers}                                                                                              |
