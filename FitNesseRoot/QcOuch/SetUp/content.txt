@@ -1,0 +1,3 @@
+#some javascript stuff
+!define or { || }
+!define and { && }

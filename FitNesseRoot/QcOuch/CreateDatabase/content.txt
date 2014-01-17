@@ -1,5 +1,3 @@
-!define or { || }
-
 |Table:smartrics.rest.fitnesse.fixture.RestFixture|http://admin:password@localhost:5984/|
 |setHeaders                                                                             |!-Authorization: Basic YWRtaW46cGFzc3dvcmQ=
 Accept: application/json -! |
