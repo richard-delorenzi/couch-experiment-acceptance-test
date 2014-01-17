@@ -1,18 +1,15 @@
-!define header { Authorization: Basic YWRtaW46cGFzc3dvcmQ=
-  Accept: application/json }
-
-
+!define or { || }
 
 |Table:smartrics.rest.fitnesse.fixture.RestFixture|http://admin:password@localhost:5984/|
 |setHeaders                                                                             |!-Authorization: Basic YWRtaW46cGFzc3dvcmQ=
 Accept: application/json -! |
-|DELETE |/q-couch                                          |            |         |                             |
-|PUT    |/q-couch                                          |201         |         |jsonbody.ok                  |
+|DELETE |/q-couch                                   |     | |jsonbody.ok ${or} jsonbody.error=="not_found"  |
+|PUT    |/q-couch                                   |201  | |jsonbody.ok                                        |
 |setBody|{"type":"ride", "name":"base-test2", "description": "simple description", "waitTimeMin" : 5}           |
-|PUT    |/q-couch/059312a0bee28c720b5f7acf9000150d         |201         |         |jsonbody.ok                  |
+|PUT    |/q-couch/059312a0bee28c720b5f7acf9000150d  |201  | |jsonbody.ok                                        |
 |setBody|{"type":"ride", "name":"list-test", "description": ["a list", "of", "descriptions"], "waitTimeMin" : 5}|
-|PUT    |/q-couch/059312a0bee28c720b5f7acf90002455         |201         |         |jsonbody.ok                  |
-|GET    |/q-couch/059312a0bee28c720b5f7acf90002455         |200         |         |jsonbody.type=="ride"        |
+|PUT    |/q-couch/059312a0bee28c720b5f7acf90002455  |201  | |jsonbody.ok                                        |
+|GET    |/q-couch/059312a0bee28c720b5f7acf90002455  |200  | |jsonbody.type=="ride"                              |
 
 
 
