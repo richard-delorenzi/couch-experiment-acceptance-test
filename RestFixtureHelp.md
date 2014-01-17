@@ -1,7 +1,7 @@
 Some help on RestFixture
 ========================
 
-This document cantains some of the things I have discovered while using RestFixture
+This document cantains some of the things I have discovered while using RestFixture. I am testing pages in JSON (retrieved from couchdb). 
 
 Multiple setHeader
 ------------------
